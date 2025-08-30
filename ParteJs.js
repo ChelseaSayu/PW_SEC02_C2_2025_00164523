@@ -36,6 +36,7 @@ function addImageFromPC() {
     input.click();
 }
 
+
 function createImage(src) {
     let container = document.getElementById("imageContainer");
 
@@ -70,4 +71,21 @@ function createImage(src) {
     imgBox.appendChild(img);
     imgBox.appendChild(btnDelete);
     container.appendChild(imgBox);
+}
+function changeSectionColors() {
+
+    const sections = document.querySelectorAll('.London, .Paris, .Tokyo');
+
+
+    const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+
+    sections.forEach(section => {
+
+        const title = section.querySelector('h2');
+        if (title) title.style.color = randomColor;
+
+
+        const paragraphs = section.querySelectorAll('p');
+        paragraphs.forEach(p => p.style.color = randomColor);
+    });
 }
