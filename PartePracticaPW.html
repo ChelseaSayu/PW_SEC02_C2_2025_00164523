@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Ejercicio practico</title>
@@ -7,6 +8,15 @@
 
 
 </head>
+<div id="imageModal" class="modal">
+    <div class="modal-content">
+        <h2>Add image</h2>
+        <p>Choose how you want to upload your image:</p>
+        <button class="btn-url" onclick="addImageFromURL()">🌐 From URL</button>
+        <button class="btn-local" onclick="addImageFromPC()">💻 From your PC</button>
+        <button class="btn-cancel" onclick="closeModal()">Cancel</button>
+    </div>
+</div>
 
 <body>
 
@@ -31,14 +41,14 @@
         <br>
         <div class="Paris">
             <h2>Paris</h2>
-            <p>Pais is the capital of France</p>
+            <p>Pais is the capital of France.</p>
             <p>The Paris area is one of the largest population centers in Europe, with more than 12 million inhabitants.
             </p>
         </div>
         <br>
         <div class="Tokyo">
             <h2>Tokyo</h2>
-            <p>Tokyo is the capital of Japan</p>
+            <p>Tokyo is the capital of Japan.</p>
             <p>It is the center of the Greater Tokyo Area, and the most populous metropolitalian area in the world.</p>
         </div>
     </div>
@@ -46,7 +56,14 @@
     <footer>
         <h1>Footer Demo</h1>
         <p>footer example demo!</p>
+
+        <button class="btn" onclick="openModal()">Add image</button>
+
+        
+        <div id="imageContainer"></div>
     </footer>
+
+    <script src="Partejs.js"></script>
 </body>
 
 </html>
